@@ -3347,6 +3347,17 @@
     <a name="circuit" val="mux2x1_16Bits"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="80,90 120,49" stroke="#000000"/>
+      <polyline fill="none" points="230,90 190,50" stroke="#000000"/>
+      <polyline fill="none" points="119,50 190,50" stroke="#000000"/>
+      <polyline fill="none" points="80,90 230,90" stroke="#000000"/>
+      <circ-anchor facing="north" x="150" y="50"/>
+      <circ-port dir="in" pin="330,520" x="130" y="90"/>
+      <circ-port dir="in" pin="350,1450" x="180" y="90"/>
+      <circ-port dir="in" pin="420,260" x="100" y="70"/>
+      <circ-port dir="out" pin="1170,1150" x="150" y="50"/>
+    </appear>
     <comp lib="0" loc="(1050,1150)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="facing" val="west"/>
