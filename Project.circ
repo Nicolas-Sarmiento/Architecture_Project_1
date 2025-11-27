@@ -630,16 +630,25 @@
       <a name="label" val="ALUK"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(2520,1490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
     <comp lib="0" loc="(2540,2280)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="fanout" val="42"/>
       <a name="incoming" val="42"/>
     </comp>
     <comp lib="0" loc="(2570,2070)" name="NoConnect"/>
-    <comp lib="0" loc="(2570,2080)" name="NoConnect"/>
     <comp lib="0" loc="(2580,1810)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="GateALU"/>
+    </comp>
+    <comp lib="0" loc="(2600,1910)" name="Tunnel">
+      <a name="label" val="SR2MUX"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
     <comp lib="0" loc="(2610,2130)" name="Splitter">
       <a name="appear" val="center"/>
@@ -736,10 +745,6 @@
       <a name="label" val="ALUK"/>
       <a name="labelfont" val="SansSerif bold 10"/>
       <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(2900,2010)" name="Tunnel">
-      <a name="label" val="SR2MUX"/>
-      <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
     <comp lib="0" loc="(2900,2030)" name="Tunnel">
       <a name="label" val="VectorMUX"/>
@@ -862,6 +867,20 @@
     <comp lib="0" loc="(3020,670)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="LDREG"/>
+    </comp>
+    <comp lib="0" loc="(3240,860)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(3240,900)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(3280,620)" name="Tunnel">
       <a name="label" val="CLK"/>
@@ -1253,13 +1272,15 @@
     <wire from="(2480,600)" to="(2480,750)"/>
     <wire from="(2490,2280)" to="(2520,2280)"/>
     <wire from="(2510,1610)" to="(2550,1610)"/>
+    <wire from="(2520,1490)" to="(2550,1490)"/>
     <wire from="(2520,2120)" to="(2520,2280)"/>
     <wire from="(2520,2280)" to="(2540,2280)"/>
     <wire from="(2530,1320)" to="(2530,1420)"/>
     <wire from="(2530,440)" to="(2530,1060)"/>
-    <wire from="(2550,1460)" to="(2550,1580)"/>
+    <wire from="(2550,1460)" to="(2550,1490)"/>
+    <wire from="(2550,1490)" to="(2550,1580)"/>
     <wire from="(2560,2070)" to="(2570,2070)"/>
-    <wire from="(2560,2080)" to="(2570,2080)"/>
+    <wire from="(2560,2080)" to="(2580,2080)"/>
     <wire from="(2560,2090)" to="(2590,2090)"/>
     <wire from="(2560,2100)" to="(2600,2100)"/>
     <wire from="(2560,2110)" to="(2610,2110)"/>
@@ -1302,6 +1323,8 @@
     <wire from="(2570,1170)" to="(2570,1420)"/>
     <wire from="(2570,1170)" to="(3190,1170)"/>
     <wire from="(2580,1810)" to="(2590,1810)"/>
+    <wire from="(2580,1910)" to="(2580,2080)"/>
+    <wire from="(2580,1910)" to="(2600,1910)"/>
     <wire from="(2590,1930)" to="(2590,2090)"/>
     <wire from="(2590,1930)" to="(2900,1930)"/>
     <wire from="(2600,1640)" to="(2600,1770)"/>
@@ -1321,7 +1344,6 @@
     <wire from="(2630,2210)" to="(2650,2210)"/>
     <wire from="(2630,2220)" to="(2720,2220)"/>
     <wire from="(2640,2010)" to="(2640,2140)"/>
-    <wire from="(2640,2010)" to="(2900,2010)"/>
     <wire from="(2640,610)" to="(2670,610)"/>
     <wire from="(2650,1110)" to="(2650,1580)"/>
     <wire from="(2650,1110)" to="(3100,1110)"/>
@@ -1406,10 +1428,14 @@
     <wire from="(2920,620)" to="(3060,620)"/>
     <wire from="(2920,710)" to="(3060,710)"/>
     <wire from="(3020,670)" to="(3060,670)"/>
-    <wire from="(3100,730)" to="(3100,1110)"/>
+    <wire from="(3100,730)" to="(3100,900)"/>
+    <wire from="(3100,900)" to="(3100,1110)"/>
+    <wire from="(3100,900)" to="(3240,900)"/>
     <wire from="(3150,390)" to="(3150,540)"/>
     <wire from="(3150,390)" to="(3470,390)"/>
-    <wire from="(3190,730)" to="(3190,1170)"/>
+    <wire from="(3190,730)" to="(3190,860)"/>
+    <wire from="(3190,860)" to="(3190,1170)"/>
+    <wire from="(3190,860)" to="(3240,860)"/>
     <wire from="(3230,620)" to="(3280,620)"/>
     <wire from="(3230,640)" to="(3270,640)"/>
     <wire from="(3230,710)" to="(3290,710)"/>
@@ -6241,11 +6267,8 @@
       <a name="fanout" val="3"/>
       <a name="incoming" val="52"/>
     </comp>
-    <comp lib="0" loc="(1270,290)" name="Constant">
-      <a name="facing" val="south"/>
-    </comp>
     <comp lib="0" loc="(1270,730)" name="NoConnect"/>
-    <comp lib="0" loc="(1290,290)" name="Tunnel">
+    <comp lib="0" loc="(1280,290)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="IR5"/>
       <a name="labelfont" val="SansSerif bold 8"/>
@@ -6607,10 +6630,6 @@
       <a name="inputs" val="4"/>
       <a name="negate0" val="true"/>
     </comp>
-    <comp lib="1" loc="(1280,340)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="30"/>
-    </comp>
     <comp lib="1" loc="(810,460)" name="OR Gate">
       <a name="facing" val="south"/>
     </comp>
@@ -6750,12 +6769,10 @@
     <wire from="(1250,720)" to="(1290,720)"/>
     <wire from="(1250,730)" to="(1270,730)"/>
     <wire from="(1250,740)" to="(1270,740)"/>
-    <wire from="(1270,290)" to="(1270,310)"/>
     <wire from="(1270,740)" to="(1270,770)"/>
     <wire from="(1270,770)" to="(1300,770)"/>
-    <wire from="(1280,340)" to="(1280,760)"/>
+    <wire from="(1280,290)" to="(1280,760)"/>
     <wire from="(1280,760)" to="(1300,760)"/>
-    <wire from="(1290,290)" to="(1290,310)"/>
     <wire from="(1290,720)" to="(1290,750)"/>
     <wire from="(1290,750)" to="(1300,750)"/>
     <wire from="(1320,740)" to="(1350,740)"/>
@@ -7323,8 +7340,8 @@
       <polygon fill="none" points="120,90 220,90 200,130 139,130" stroke="#000000"/>
       <circ-anchor facing="east" x="170" y="130"/>
       <circ-port dir="in" pin="270,170" x="130" y="110"/>
-      <circ-port dir="in" pin="270,280" x="150" y="90"/>
-      <circ-port dir="in" pin="270,330" x="190" y="90"/>
+      <circ-port dir="in" pin="270,280" x="190" y="90"/>
+      <circ-port dir="in" pin="270,330" x="150" y="90"/>
       <circ-port dir="out" pin="430,300" x="170" y="130"/>
     </appear>
     <comp lib="0" loc="(270,170)" name="Pin">
