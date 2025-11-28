@@ -1,0 +1,5 @@
+.ORIG x3000
+LD R4, A
+HALT
+A .FILL #4321
+.END
